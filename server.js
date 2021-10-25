@@ -6,7 +6,7 @@ const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 8080;
 
 corsProxy.createServer({
-    originWhitelist: ['http://localhost:3000', 'https://clare-cors-server.herokuapp.com/', 'https://nastydealer.netlify.app/nastydealer'],
+    originWhitelist: ['http://localhost:3000', 'https://nastydealer.netlify.app/nastydealer'],
     requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, () => {
